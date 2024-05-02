@@ -1,5 +1,14 @@
+const db = require('../db/connection');
+const DataTypes = require('sequelize');
 
-let Comment;
+const Comment = db.define('Comment', {
+  body: {
+    type: DataTypes.TEXT,
+  },
+  createdAt: {
+    type: DataTypes.DATEONLY,
+  },
+});
 
 
 module.exports = Comment;
