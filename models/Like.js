@@ -1,4 +1,12 @@
+const db = require('../db/connection');
+const DataTypes = require('sequelize');
 
-let Like;
-
+const Like = db.define('like', {
+  reactionType: {
+    type: DataTypes.STRING
+  },
+  createdAt: {
+    type: DataTypes.DATEONLY
+  }
+})
 module.exports = Like;
